@@ -132,6 +132,20 @@
 							</div>
 						</div>
 					</article>
+					<!-- 在文章内容下方，</article> 之后添加 -->
+{{#OPT.utterances.enabled}}
+<div id="utterances-comments" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
+    <h3 style="margin-bottom: 20px;">💬 评论</h3>
+    <script src="https://utteranc.es/client.js"
+        repo="{{OPT.utterances.repo}}"
+        issue-term="{{OPT.utterances.issueTerm}}"
+        {{#OPT.utterances.label}}label="{{OPT.utterances.label}}"{{/OPT.utterances.label}}
+        theme="{{OPT.utterances.theme}}"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
+{{/OPT.utterances.enabled}}
 				</div>
 
 				<aside class="sidebar">
